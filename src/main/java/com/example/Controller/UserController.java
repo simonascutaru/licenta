@@ -1,21 +1,18 @@
-package com.example.Controller;
+package com.example.controller;
 
-import com.example.Entity.User;
-import com.example.Service.UserService;
+import com.example.model.User;
+import com.example.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Collection;
 
 /**
  * Created by sscutaru on 1/25/2017.
  */
-@Controller
+@RestController
+@RequestMapping("/users")
 public class UserController {
 
     @Autowired
