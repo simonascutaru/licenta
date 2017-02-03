@@ -1,51 +1,39 @@
 package com.example.model;
 
-import javax.persistence.Entity;
+import javax.persistence.*;
 
 /**
- * Created by sscutaru on 1/26/2017.
+ * Created by sscutaru on 1/25/2017.
  */
 
 @Entity
+@Table(name="habit")
 public class Habit {
+  private Long habit_id;
+  private String habit_name;
+  private Long category_id;
 
-    private int id;
-    private String name;
-    private String description;
+  public Long getHabit_id() {
+    return habit_id;
+  }
 
+  public void setHabit_id(Long habit_id) {
+    this.habit_id = habit_id;
+  }
 
-    public Habit(int id, String name, String description) {
-        this.id = id;
-        this.name = name;
-        this.description = description;
-    }
+  public String getHabit_name() {
+    return habit_name;
+  }
 
-    public Habit(){}
+  public void setHabit_name(String habit_name) {
+    this.habit_name = habit_name;
+  }
 
+  public Long getCategory_id() {
+    return category_id;
+  }
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-
+  public void setCategory_id(Long category_id) {
+    this.category_id = category_id;
+  }
 }

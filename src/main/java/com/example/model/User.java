@@ -1,27 +1,29 @@
 package com.example.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 /**
  * Created by sscutaru on 1/25/2017.
  */
 
 @Entity
+@Table(name="user")
 public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    private int id;
+    private Long id;
 
+    @Column
     private String name;
 
+    @Column
     private String surname;
 
+    @Column
     private String email;
 
+    @Column
     private String password;
 
     public User(String name, String surname, String email, String password) {
@@ -31,11 +33,11 @@ public class User {
         this.password = password;
     }
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
