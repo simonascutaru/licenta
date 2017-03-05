@@ -1,4 +1,4 @@
-package com.example.model;
+package com.fii.uaic.model;
 
 import javax.persistence.*;
 

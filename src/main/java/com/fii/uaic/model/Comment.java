@@ -1,4 +1,4 @@
-package com.example.model;
+package com.fii.uaic.model;
 
 import javax.persistence.*;
 
@@ -9,6 +9,8 @@ import javax.persistence.*;
 @Entity
 @Table(name="comment")
 public class Comment {
+
+
   private Long comment_id;
   private String comment_body;
   private Long user_id;

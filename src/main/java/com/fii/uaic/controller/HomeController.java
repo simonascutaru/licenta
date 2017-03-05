@@ -1,10 +1,12 @@
-package com.example.controller;
+package com.fii.uaic.controller;
 
 import org.apache.catalina.servlet4preview.http.HttpServletRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.security.Principal;
 
@@ -12,14 +14,14 @@ import java.security.Principal;
  * Created by sscutaru on 1/25/2017.
  */
 
-@Controller
+@RestController
 public class HomeController {
-
+//
 //    @RequestMapping(value = "/hello", method = RequestMethod.GET)
 //    @ResponseBody
 //    public String hello(HttpServletRequest request) {
 //
-//        return "templates/homepage";
+//        return "homepage";
 //    }
 
     @RequestMapping(value = "/hello", method = RequestMethod.GET)

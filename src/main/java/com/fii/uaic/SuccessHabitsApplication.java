@@ -1,6 +1,7 @@
-package com.example;
+package com.fii.uaic;
 
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.support.SpringBootServletInitializer;
@@ -13,6 +14,7 @@ import javax.servlet.ServletException;
 import javax.servlet.ServletRegistration;
 
 @SpringBootApplication
+@EnableAutoConfiguration
 public class SuccessHabitsApplication extends SpringBootServletInitializer {
 
 	private static final String DISPATCHER_SERVLET_NAME = "dispatcher";

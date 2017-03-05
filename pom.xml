@@ -58,6 +58,18 @@
 		</dependency>
 
 
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+		</dependency>
+
+
+		<!-- https://mvnrepository.com/artifact/org.springframework/spring-tx -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-tx</artifactId>
+			<version>4.3.7.RELEASE</version>
+		</dependency>
 
 		<!--&lt;!&ndash; Security &ndash;&gt;-->
 		<!--<dependency>-->
@@ -82,6 +94,5 @@
 			</plugin>
 		</plugins>
 	</build>
-
 
 </project>
