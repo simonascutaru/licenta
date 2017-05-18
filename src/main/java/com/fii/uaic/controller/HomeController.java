@@ -1,14 +1,12 @@
 package com.fii.uaic.controller;
 
+import com.fii.uaic.model.User;
+import com.fii.uaic.service.UserService;
 import org.apache.catalina.servlet4preview.http.HttpServletRequest;
-import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.security.Principal;
 
 /**
  * Created by sscutaru on 1/25/2017.
@@ -16,6 +14,7 @@ import java.security.Principal;
 
 @RestController
 public class HomeController {
+    UserService usr;
 //
 //    @RequestMapping(value = "/hello", method = RequestMethod.GET)
 //    @ResponseBody
@@ -31,8 +30,25 @@ public class HomeController {
     }
 
 
-    @RequestMapping(value = "/", method = RequestMethod.GET)
-    public String index(Principal principal) {
-        return principal != null ? "homeSignedIn" : "homeNotSignedIn";
+//    @RequestMapping(value = "/", method = RequestMethod.GET)
+//    public String index(Principal principal) {
+//        return principal != null ? "homeSignedIn" : "homeNotSignedIn";
+//    }
+
+    @RequestMapping(value = "/")
+    public String index(){
+        return "seufhae";
     }
+
+    @RequestMapping("/findall")
+    public String findAll(){
+        String result = "<html>";
+
+        for(User user : usr.getAll()){
+            result += "<div>" + user.toString() + "</div>";
+        }
+
+        return result + "</html>";
+    }
+
 }

@@ -1,15 +1,12 @@
 package com.fii.uaic.service;
 
-import com.fii.uaic.model.Category;
-import com.fii.uaic.repository.UserRepository;
 import com.fii.uaic.model.User;
+import com.fii.uaic.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 
 /**
@@ -19,8 +16,8 @@ import java.util.List;
 @Transactional
 public class UserService {
 
+//    @Qualifier("postgresql")
     @Autowired
-//    @Qualifier("postgreSQL")
     private UserRepository userRepository;
 
 //    public Collection<User> getAllUsers(){
@@ -50,7 +47,7 @@ public class UserService {
     }
 
     public List<User> getAll() {
-        ArrayList<User> users =  (ArrayList<User>) userRepository.getAll();
+        ArrayList<User> users =  (ArrayList<User>) userRepository.findAll();
         return users;
     }
 }

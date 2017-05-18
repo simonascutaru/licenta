@@ -2,28 +2,20 @@ package com.fii.uaic.repository;
 
 
 import com.fii.uaic.model.User;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.web.bind.annotation.RequestMapping;
 
-import java.util.Collection;
 import java.util.List;
-import java.util.Map;
-
-import static oracle.jrockit.jfr.events.Bits.intValue;
 
 /**
  * Created by sscutaru on 1/25/2017.
  */
 @Repository
 @Transactional
-public class UserRepository extends AbstractRepository<User>{
+public interface UserRepository extends JpaRepository<User, Long> {
 
-    protected UserRepository() {super(User.class);}
-
-    public List<User> getAll() {
-        return em().createNamedQuery(User.GET_ALL_USERS).getResultList();
-    }
+    List<User> findAll();
 
 //    public User getUserById(long id){
 //        int int_id = intValue(id);

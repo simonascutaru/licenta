@@ -9,6 +9,9 @@ import javax.persistence.*;
 @Entity
 @Table(name="question")
 public class Question {
+
+  @Id
+  @GeneratedValue(strategy = GenerationType.SEQUENCE)
   private Long question_id;
   private String question_title;
   private String question_body;

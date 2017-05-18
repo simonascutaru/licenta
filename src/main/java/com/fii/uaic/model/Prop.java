@@ -9,6 +9,9 @@ import javax.persistence.*;
 @Entity
 @Table(name="prop")
 public class Prop {
+
+  @Id
+  @GeneratedValue(strategy = GenerationType.SEQUENCE)
   private Long prop_id;
   private Long prop_no;
   private Long user_id;

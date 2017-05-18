@@ -6,7 +6,7 @@ import javax.persistence.*;
  * Created by sscutaru on 1/25/2017.
  */
 
-@Entity
+
 @Table(name="answer")
 public class Answer {
   private String answer_text;

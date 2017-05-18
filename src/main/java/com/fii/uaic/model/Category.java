@@ -12,7 +12,7 @@ import static com.fii.uaic.model.Category.GET_ALL_CATEGORIES;
 @Entity
 @Table(name="category")
 @NamedQueries({
-        @NamedQuery(name = GET_ALL_CATEGORIES, query = "SELECT c FROM category c")
+        @NamedQuery(name = Category.GET_ALL_CATEGORIES, query = "SELECT c FROM Category c")
 })
 public class Category {
 

@@ -10,7 +10,8 @@ import javax.persistence.*;
 @Table(name="comment")
 public class Comment {
 
-
+  @Id
+  @GeneratedValue(strategy = GenerationType.SEQUENCE)
   private Long comment_id;
   private String comment_body;
   private Long user_id;

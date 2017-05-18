@@ -9,6 +9,9 @@ import javax.persistence.*;
 @Entity
 @Table(name="activity")
 public class Activity {
+
+  @Id
+  @GeneratedValue(strategy = GenerationType.SEQUENCE)
   private Long activity_id;
   private java.sql.Date activity_timestamp;
   private Long activity_streak;

@@ -13,7 +13,7 @@ import javax.persistence.*;
                 name = User.GET_ALL_USERS,
                 query = "select u from User u"),
         @NamedQuery(
-                name = "GET_USER_BY_ID",
+                name = User.GET_USER_BY_ID,
                 query = "select u from User u where u.userId = :user_id")
 })
 public class User {
@@ -84,5 +84,10 @@ public class User {
 
     public void setRole(Role role) {
         this.role = role;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("Customer[id=%d, firstName='%s', email='%s']", userId, userName, userEmail);
     }
 }
