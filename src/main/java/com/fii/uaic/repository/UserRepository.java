@@ -6,8 +6,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.List;
-
 /**
  * Created by sscutaru on 1/25/2017.
  */
@@ -15,7 +13,7 @@ import java.util.List;
 @Transactional
 public interface UserRepository extends JpaRepository<User, Long> {
 
-    List<User> findAll();
+//    List<User> findAll();
 
 //    public User getUserById(long id){
 //        int int_id = intValue(id);

@@ -5,8 +5,6 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.support.SpringBootServletInitializer;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.web.context.ContextLoaderListener;
 import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
 import org.springframework.web.servlet.DispatcherServlet;
@@ -16,11 +14,12 @@ import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.ServletRegistration;
 
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages="com.fii.uaic")
 @EnableAutoConfiguration
 @EnableWebMvc
-@ComponentScan("com.fii.uaic")
-@EnableJpaRepositories(basePackages = "repository")
+//@ComponentScan(basePackages = {"com.fii.uaic.controller", "com.fii.uaic.service"})
+//@EntityScan("com.fii.uaic.entities")
+//@EnableJpaRepositories("com.fii.uaic.repositories")
 public class SuccessHabitsApplication extends SpringBootServletInitializer {
 
 	private static final String DISPATCHER_SERVLET_NAME = "dispatcher";

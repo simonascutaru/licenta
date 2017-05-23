@@ -7,7 +7,7 @@ import javax.persistence.*;
  */
 
 @Entity
-@Table(name="user")
+@Table(name="users")
 @NamedQueries({
         @NamedQuery(
                 name = User.GET_ALL_USERS,
