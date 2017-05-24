@@ -39,12 +39,24 @@ public class User {
     @JoinColumn(name="role_id")
     private Role role;
 
-    public User(String userName, String userEmail, String userPassword, Role role) {
-        this.userName = userName;
-        this.userEmail = userEmail;
-        this.userPassword = userPassword;
-        this.role = role;
+    @Transient
+    public String getUserPasswordConfirm() {
+        return userPasswordConfirm;
     }
+
+    public void setUserPasswordConfirm(String userPasswordConfirm) {
+        this.userPasswordConfirm = userPasswordConfirm;
+    }
+
+    @Column
+    private String userPasswordConfirm;
+
+//    public User(String userName, String userEmail, String userPassword, Role role) {
+//        this.userName = userName;
+//        this.userEmail = userEmail;
+//        this.userPassword = userPassword;
+//        this.role = role;
+//    }
 
     public Long getUserId() {
         return userId;

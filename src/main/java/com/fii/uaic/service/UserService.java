@@ -32,7 +32,7 @@ public interface UserService {
 //        this.userRepository.insertUserToDb(user);
 //    }
 
-    public User save(User usr);
+    public void save(User usr);
 //    {
 //        userRepository.save(usr);
 //        return usr;
@@ -43,4 +43,6 @@ public interface UserService {
 //        ArrayList<User> users =  (ArrayList<User>) userRepository.findAll();
 //        return users;
 //    }
+
+    User findByUsername(String userName);
 }
