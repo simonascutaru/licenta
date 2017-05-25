@@ -3,11 +3,12 @@ package com.fii.uaic.repository;
 
 import com.fii.uaic.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
 /**
  * Created by sscutaru on 1/25/2017.
  */
-//@Repository
+@Repository
 //@Transactional
 public interface UserRepository extends JpaRepository<User, Long> {
 
