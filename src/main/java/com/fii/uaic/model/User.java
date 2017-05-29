@@ -7,15 +7,15 @@ import javax.persistence.*;
  */
 
 @Entity
-@Table(name="user")
-@NamedQueries({
-        @NamedQuery(
-                name = User.GET_ALL_USERS,
-                query = "select u from user u"),
-        @NamedQuery(
-                name = User.GET_USER_BY_ID,
-                query = "select u from user u where u.userId = :user_id")
-})
+@Table(name="users")
+//@NamedQueries({
+//        @NamedQuery(
+//                name = User.GET_ALL_USERS,
+//                query = "select u from user u"),
+//        @NamedQuery(
+//                name = User.GET_USER_BY_ID,
+//                query = "select u from user u where u.userId = :user_id")
+//})
 public class User {
 
     public static final String GET_ALL_USERS = "User.GET_ALL_USERS";
@@ -35,21 +35,12 @@ public class User {
     @Column(name = "user_password")
     private String userPassword;
 
+    @Column(name = "user_password_confirm")
+    private String userPasswordConfirm;
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name="role_id")
     private Role role;
-
-    @Transient
-    public String getUserPasswordConfirm() {
-        return userPasswordConfirm;
-    }
-
-    public void setUserPasswordConfirm(String userPasswordConfirm) {
-        this.userPasswordConfirm = userPasswordConfirm;
-    }
-
-    @Column
-    private String userPasswordConfirm;
 
     public User(){}
 
@@ -91,6 +82,15 @@ public class User {
 
     public void setUserPassword(String userPassword) {
         this.userPassword = userPassword;
+    }
+
+    @Transient
+    public String getUserPasswordConfirm() {
+        return userPasswordConfirm;
+    }
+
+    public void setUserPasswordConfirm(String userPasswordConfirm) {
+        this.userPasswordConfirm = userPasswordConfirm;
     }
 
     public Role getRole() {

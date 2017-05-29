@@ -3,6 +3,8 @@ package com.fii.uaic;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration;
+import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.support.SpringBootServletInitializer;
 import org.springframework.web.context.ContextLoaderListener;
@@ -14,8 +16,8 @@ import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.ServletRegistration;
 
-@SpringBootApplication(scanBasePackages="com.fii.uaic")
-@EnableAutoConfiguration
+@SpringBootApplication(scanBasePackages="com.fii.uaic", exclude = JpaRepositoriesAutoConfiguration.class)
+@EnableAutoConfiguration(exclude={DataSourceAutoConfiguration.class})
 @EnableWebMvc
 //@ComponentScan(basePackages = {"com.fii.uaic.controller", "com.fii.uaic.service"})
 //@EntityScan("com.fii.uaic.entities")
@@ -29,7 +31,6 @@ public class SuccessHabitsApplication extends SpringBootServletInitializer {
 	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
 		return application.sources(SuccessHabitsApplication.class);
 	}
-
 
 	public static void main(String[] args) {
 		SpringApplication.run(SuccessHabitsApplication.class, args);
