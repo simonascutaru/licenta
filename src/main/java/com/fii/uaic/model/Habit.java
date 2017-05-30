@@ -22,6 +22,8 @@ public class Habit {
   @JoinColumn(name="category_id")
   private Category category;
 
+  public Habit() {}
+
   public Habit(String habitName, Category category) {
     this.habitName = habitName;
     this.category = category;

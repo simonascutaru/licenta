@@ -22,6 +22,8 @@ public class Role {
   @OneToMany(mappedBy = "role")
   private List<User> users;
 
+  public Role(){}
+
   public Role(String roleName, List<User> users) {
     this.roleName = roleName;
     this.users = users;

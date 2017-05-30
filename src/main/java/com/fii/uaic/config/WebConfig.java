@@ -2,6 +2,7 @@ package com.fii.uaic.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 import org.springframework.core.env.Environment;
 import org.springframework.core.io.ClassPathResource;
@@ -17,6 +18,7 @@ import org.thymeleaf.templateresolver.TemplateResolver;
 /**
  * Created by sscutaru on 1/26/2017.
  */
+@Configuration
 public class WebConfig extends WebMvcConfigurerAdapter{
 
     @Autowired

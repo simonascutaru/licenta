@@ -16,7 +16,7 @@ import java.util.Collection;
  * Created by sscutaru on 1/25/2017.
  */
 @RestController
-@RequestMapping("/")
+//@RequestMapping("/")
 public class UserController {
 
     @Autowired

@@ -17,6 +17,13 @@ public class Comment {
   private Long user_id;
   private Long activity_id;
 
+  public Comment() {}
+  public Comment(String comment_body, Long user_id, Long activity_id) {
+    this.comment_body = comment_body;
+    this.user_id = user_id;
+    this.activity_id = activity_id;
+  }
+
   public Long getComment_id() {
     return comment_id;
   }

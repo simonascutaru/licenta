@@ -13,6 +13,14 @@ public class Answer {
   private Long user_id;
   private Long question_id;
 
+  public Answer() {}
+
+  public Answer(String answer_text, Long user_id, Long question_id) {
+    this.answer_text = answer_text;
+    this.user_id = user_id;
+    this.question_id = question_id;
+  }
+
   public String getAnswer_text() {
     return answer_text;
   }

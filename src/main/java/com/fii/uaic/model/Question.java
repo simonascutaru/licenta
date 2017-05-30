@@ -17,6 +17,14 @@ public class Question {
   private String question_body;
   private Long user_id;
 
+  public Question() {}
+
+  public Question(String question_title, String question_body, Long user_id) {
+    this.question_title = question_title;
+    this.question_body = question_body;
+    this.user_id = user_id;
+  }
+
   public Long getQuestion_id() {
     return question_id;
   }

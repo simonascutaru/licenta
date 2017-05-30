@@ -1,5 +1,7 @@
 package com.fii.uaic.model;
 
+import org.springframework.data.annotation.Id;
+
 import javax.persistence.*;
 
 /**
@@ -8,18 +10,8 @@ import javax.persistence.*;
 
 @Entity
 @Table(name="users")
-//@NamedQueries({
-//        @NamedQuery(
-//                name = User.GET_ALL_USERS,
-//                query = "select u from user u"),
-//        @NamedQuery(
-//                name = User.GET_USER_BY_ID,
-//                query = "select u from user u where u.userId = :user_id")
-//})
 public class User {
 
-    public static final String GET_ALL_USERS = "User.GET_ALL_USERS";
-    public static final String GET_USER_BY_ID = "User.GET_USER_BY_ID";
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)

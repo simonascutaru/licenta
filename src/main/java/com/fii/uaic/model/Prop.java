@@ -17,6 +17,13 @@ public class Prop {
   private Long user_id;
   private Long activity_id;
 
+  public Prop() {}
+  public Prop(Long prop_no, Long user_id, Long activity_id) {
+    this.prop_no = prop_no;
+    this.user_id = user_id;
+    this.activity_id = activity_id;
+  }
+
   public Long getProp_id() {
     return prop_id;
   }

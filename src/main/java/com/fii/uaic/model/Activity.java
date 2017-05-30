@@ -1,6 +1,7 @@
 package com.fii.uaic.model;
 
 import javax.persistence.*;
+import java.sql.Date;
 
 /**
  * Created by sscutaru on 1/25/2017.
@@ -19,6 +20,17 @@ public class Activity {
   private Long user_id;
   private Long habit_id;
   private String activity_note;
+
+  public Activity() {}
+
+  public Activity(Date activity_timestamp, Long activity_streak, Long activity_props, Long user_id, Long habit_id, String activity_note) {
+    this.activity_timestamp = activity_timestamp;
+    this.activity_streak = activity_streak;
+    this.activity_props = activity_props;
+    this.user_id = user_id;
+    this.habit_id = habit_id;
+    this.activity_note = activity_note;
+  }
 
   public Long getActivity_id() {
     return activity_id;

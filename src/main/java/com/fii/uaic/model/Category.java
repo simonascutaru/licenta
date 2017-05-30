@@ -29,6 +29,8 @@ public class Category {
   @OneToMany(mappedBy="category")
   private List<Habit> habits;
 
+  public Category() {}
+
   public Category(String category_name, List<Habit> habits) {
     this.category_name = category_name;
     this.habits = habits;
