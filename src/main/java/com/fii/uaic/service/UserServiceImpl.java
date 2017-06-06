@@ -12,7 +12,6 @@ import java.util.List;
  * Created by sscutaru on 5/19/2017.
  */
 
-
 @Service
 public class UserServiceImpl implements UserService {
     @Autowired
@@ -35,6 +34,6 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User findByUsername(String userName) {
-        return userRepository.findByUsername(userName);
+        return userRepository.findByUserName(userName);
     }
 }

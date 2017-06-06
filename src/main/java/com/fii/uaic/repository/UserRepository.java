@@ -11,7 +11,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 //@Transactional
 public interface UserRepository extends JpaRepository<User, Long> {
 
-    User findByUsername(String userName);
+    User findByUserName(String userName);
 
 //    List<User> findAll();
 
